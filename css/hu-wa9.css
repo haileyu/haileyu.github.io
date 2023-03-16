@@ -1,19 +1,30 @@
 body{
-    font-family: helvetica, sans-serif;
     width: 350px;
+    font-family: 'Open Sans';
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 25px;
+    color: #23085e;
 }
-label{
-    font-weight: bold;  
-}div{
-    padding-bottom: 20px;
+div{
+    padding-bottom: 40px;
 }
 input[type="text"]{
     padding: 5px;
     width: 150px;
 }
-p{
-    background: #FFC125;
-    color: #5E2612;
-    padding: 10px;
+.randomize{
+    position: relative;
+    border: 2px solid;
+    height: auto;
+    width: 500;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:aliceblue; 
+    border-color:paleturquoise;
+}
+.story p{
     visibility: hidden;
 }
