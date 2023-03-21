@@ -20,7 +20,7 @@
 * [ICA6-3](https://haileyu.github.io/ica/ica6/ica6-part3)
 * [ICA7](https://haileyu.github.io/ica/hu-ica7)
 * [ICA9](https://haileyu.github.io/ica/hu-ica9)
-* ICA10
+* [ICA10](https://haileyu.github.io/ica/hu-ica10)
 * ICA11
 * ICA12
 * ICA13
