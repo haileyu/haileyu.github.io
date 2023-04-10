@@ -42,3 +42,6 @@
 * WA13
 * WA14
 * WA15
+
+## other/quizzes...
+* [QUIZ12](https://haileyu.github.io/extra/q12)
