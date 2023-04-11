@@ -32,7 +32,7 @@ console.log("problem 2:\n");
 console.log("company name: " + company_info.company[0].company_name);
 console.log("website: " + company_info.company[0].website);
 console.log("employees:");
-for (let i=0; i<company_employees_array.length-1; i++){
+for (let i=0; i<company_employees_array.length; i++){
     console.log(company_employees_array[i].first_name);
 }
 
