@@ -63,7 +63,6 @@ p {
 .content {
     position: absolute;
     padding: 10px;
-    height: 200px; /* Should be removed. Only for demonstration */
     text-align: center;
     width: 100%;
 }
