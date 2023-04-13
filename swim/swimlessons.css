@@ -28,11 +28,21 @@ h1{
     -moz-text-fill-color: transparent;
 }
 
+img {
+    width:100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 700px;
+}
+
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 35px;
     color: #348AA7;
     line-height: 55px;
+    padding-left: 60px;
+    padding-right: 60px;
+
 }
 
 p {
@@ -40,6 +50,9 @@ p {
     font-size: 25px;
     color: #348AA7;
     line-height: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
 }
 
 .navMenu {
