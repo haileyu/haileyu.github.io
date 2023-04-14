@@ -56,7 +56,6 @@ h2 {
     line-height: 45px;
     padding-left: 60px;
     padding-right: 60px;
-
 }
 
 .book{
@@ -118,7 +117,6 @@ p {
     padding-right: 40px;
     font-size: 20px;
     line-height: 40px;
-    letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 600px) {
