@@ -23,18 +23,46 @@
         <p class="shark"> &#129416;</p>
         <h1 class="gradient-text">About Us</h1>
 
-        <h2>We're two sisters who love teaching swim lessons!</h2>
+        <!-- <h2>We're two sisters who love teaching swim lessons!<br><br></h2> -->
 
-        <h1 class="gradient-text2">Hailey</h1>
-        <img src="swim-hailey.jpg" alt="a picture of hailey">
-        <p class="bio">
+        <a href="#" id="about-button" class="btn btn-white" onclick="changeContent()">Learn About Laine!</a>
+
+        <h1 id="title" class="gradient-text2">Hailey</h1>
+        <img id="profile-pic" class="pic" src="swim-hailey.jpg" alt="a professional photo of laine or hailey">
+        <p id="bio">
             I have four years of experience working as both a swim coach and private swim instructor.
             Being a swimmer all my life, I'm passionate about teaching the sport to others, and having fun while doing it!
             I've had so much success helping introduce new swimmers to the water, and would be so excited to work with your child, too!
             <br><br>Currently, I'm a rising sophomore at the University of Colorado, Boulder, where I'm studying Engineering, as well as Engineering Management.
         </p>
-
     </div>
+
+    <script>
+        let currentState = "hailey";
+
+        function changeContent(){
+          // Get elements by ID
+            const title = document.getElementById("title");
+            const profilePic = document.getElementById("profile-pic");
+            const bio = document.getElementById("bio");
+            const aboutButton = document.getElementById("about-button");
+  
+          // Change elements' content
+            if (currentState==="hailey"){
+                title.textContent = "Laine";
+                profilePic.src = "swim-laine.jpg";
+                bio.innerHTML = "<p>I'm a swimmer and swim coach with six years of experience, and I love helping others discover the joy of swimming. Whether your child is a complete beginner or an experienced swimmer, I can help them to improve in the water.</p><p>Currently, I am studying Kinesiology at Boise State University!</p>";
+                aboutButton.textContent = "Learn About Hailey!";
+                currentState = "laine";
+            }else{
+                title.textContent = "Hailey";
+                profilePic.src = "swim-hailey.jpg";
+                bio.innerHTML = "<p>I have four years of experience working as both a swim coach and private swim instructor. Being a swimmer all my life, I'm passionate about teaching the sport to others, and having fun while doing it! I've had so much success helping introduce new swimmers to the water, and would be so excited to work with your child, too! <br><br>Currently, I'm a rising sophomore at the University of Colorado, Boulder, where I'm studying Engineering, as well as Engineering Management.</p>";
+                aboutButton.textContent = "Learn About Laine!";
+                currentState = "hailey";
+            }
+        }
+      </script>
 
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/usher-swim', text: 'Book Now!', color: '#348aa7', textColor: '#ffffff', branding: true }); }</script>

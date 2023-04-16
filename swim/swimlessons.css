@@ -30,7 +30,7 @@ h1{
 
 .gradient-text2 {
     padding-top: 40px;
-    font-size: 40px;
+    font-size: 50px;
     background-color: #348AA7;
     background-image: linear-gradient(0deg, #348AA7, #1B3B6F);
     background-size: 100%;
@@ -97,6 +97,8 @@ p {
     text-align: center;
     width: 100%;
     align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .calendly-inline-widget {
@@ -110,13 +112,40 @@ p {
     line-height: 30px; 
 }
 
+.pic{
+    width: 75%;
+    border-radius: 50%;
+}
+
 .info{
     color: #1B3B6F;
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
     font-size: 20px;
     line-height: 40px;
+    padding: 20px;
+}
+
+.oval {
+    background-color: rgba(52, 138, 167, 0.4);
+    border-radius: 50%;
+  }
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transition: all .2s;
+    font-size: 30px;
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(52, 138, 167, 0.4);
+}
+
+.btn-white {
+    background-image: linear-gradient(45deg, #A1DAE3, #348AA7);
+    background-color: #A1DAE3;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
