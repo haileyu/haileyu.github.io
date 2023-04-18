@@ -1,74 +1,52 @@
+function flipSquare(square) {
+    if (Math.random() < 0.015) {
+        badalert();
+        reset();
+        return;
+    }
+    if (square.classList.contains("flip")) {
+        square.classList.remove("flip");
+        square.classList.add("flip-reverse");
+        if (isNaN(parseInt(output.textContent))) {
+            outputInt = 0;
+        } else if (outputInt > 0) {
+            outputInt -= 1;
+        }
+    } else {
+        square.classList.remove("flip-reverse");
+        square.classList.add("flip");
+        if (isNaN(parseInt(output.textContent))) {
+            outputInt = 1;
+        } else if (outputInt < 100) {
+            outputInt += 1;
+        }
+    }
+    output.textContent = outputInt;
+}
 
-
-function check() {
-    console.log('test');
+function badalert() {
+    alert("you've flipped over an evil square! your volume is now reset - start over!");
 }
 
 function submit() {
-    alert(output.textContent);
+    if (isNaN(parseInt(output.textContent))) {
+        output.textContent = "0";
+    }
+    alert("your volume is: " + output.textContent);
 }
 
 function reset() {
+    const squares = document.querySelectorAll('.square');
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].classList.remove("flip");
+        squares[i].classList.remove("flip-reverse");
+    }
     outputInt = 0;
     output.textContent = outputInt;
 }
 
-function minus() {
-    if (outputInt > 0) {
-    outputInt -=1;
-    output.textContent = outputInt; }
-    
-}
-
-function plus() {
-    if (outputInt < 100) {
-    outputInt +=1;
-    output.textContent = outputInt;
-    }
-}
-
-function random() {
-    outputInt = randomNumber(0, 100);
-    output.textContent = outputInt;
-}
-
-function randomNumber(min, max) {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return num;
-  }
-
-
-
 const output = document.querySelector('.output');
 let outputInt = parseInt(output.textContent);
-console.log(outputInt);
 
-const minusButton = document.querySelector('.minus-button').addEventListener('click', minus);
-const plusButton = document.querySelector('.plus-button').addEventListener('click', plus);
 const resetButton = document.querySelector('.reset-button').addEventListener('click', reset);
-const randomButton = document.querySelector('.random-button').addEventListener('click', random);
 const submitButton = document.querySelector('.submit-button').addEventListener('click', submit);
-
-
-/* const button = document.querySelector('.button');
-const output = document.querySelector('.output');
-let phone_content = document.querySelector('.phone');
-
-button.addEventListener('click', updateOutput);
-
-function updateOutput() {
-    output.textContent = phone_content.value;
-    alert(phone_content.value);
-}
-*/
-
-
-var slider = document.getElementById("myRange");
-var sliderSubmit = document.querySelector(".slider-submit-button").addEventListener('click', update);
-var sliderOutput = document.querySelector(".slider-output");
-
-
-// Update the current slider value (each time you drag the slider handle)
-function update() {
-  sliderOutput.textContent = slider.value;
-}

@@ -23,7 +23,6 @@
 * [ICA10](https://haileyu.github.io/ica/hu-ica10)
 * [ICA11](https://haileyu.github.io/ica/hu-ica11)
 * [ICA12](https://haileyu.github.io/ica/hu-ica12)
-* ICA13
 * ICA14
 * ICA15
 
