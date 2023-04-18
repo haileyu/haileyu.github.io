@@ -1,9 +1,17 @@
 function flipSquare(square) {
-    if (Math.random() < 0.015) {
+    if (Math.random() < 0.02) {
+        const goofySound = new Audio("goofy.mp3");
+        const volume = Math.min(outputInt / 100, 1); // Set volume based on outputInt
+        goofySound.volume = volume;
+        goofySound.play();
         badalert();
         reset();
         return;
     }
+    const boomSound = new Audio("boom.mp3");
+    const volume = Math.min(outputInt / 100, 1); // Set volume based on outputInt
+    boomSound.volume = volume;
+    boomSound.play();
     if (square.classList.contains("flip")) {
         square.classList.remove("flip");
         square.classList.add("flip-reverse");

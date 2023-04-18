@@ -63,7 +63,7 @@ input{
     padding: 10px;
     background-image: radial-gradient(slateblue,midnightblue);
     color: #fff;
-    animation-duration: 0.5s;
+    animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
 
