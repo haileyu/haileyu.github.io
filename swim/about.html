@@ -23,17 +23,14 @@
         <p class="shark"> &#129416;</p>
         <h1 class="gradient-text">About Us</h1>
 
-        <!-- <h2>We're two sisters who love teaching swim lessons!<br><br></h2> -->
-
         <a href="#" id="about-button" class="btn btn-white" onclick="changeContent()">Learn About Laine!</a>
 
-        <h1 id="title" class="gradient-text2">Hailey</h1>
-        <img id="profile-pic" class="pic" src="swim-hailey.jpg" alt="a professional photo of laine or hailey">
-        <p id="bio">
-            I have four years of experience working as both a swim coach and private swim instructor.
-            Being a swimmer all my life, I'm passionate about teaching the sport to others, and having fun while doing it!
-            I've had so much success helping introduce new swimmers to the water, and would be so excited to work with your child, too!
-            <br><br>Currently, I'm a rising sophomore at the University of Colorado, Boulder, where I'm studying Engineering, as well as Engineering Management.
+        <h1 id="title" class="fade-transition gradient-text2">Hailey</h1>
+        <img id="profile-pic" class="fade-transition pic" src="swim-hailey.jpg" alt="a professional photo of laine or hailey">
+        <p id="bio" class="fade-transition">
+            Hello there! My name is Hailey Usher and I am a sophomore at the University of Colorado, Boulder, where I am studying Engineering and Engineering Management. I am also a member of CU's club swim team, and I have previous experience as a swimmer for both SRV and many years on the Crow Canyon Sea Lions.<br><br>
+            My years of being coached have taught me the importance of good coaching, which led me to become a junior coach for the Sea Lions. Through this role, I learned the value of clear communication, patience, creating a fun team environment, and motivating children at various skill levels. As someone who has been a swimmer for most of my life, I am passionate about sharing my love for the sport and helping others learn while having fun.<br><br>
+            I have been successful in introducing new swimmers to the water, and I am eager to work with your child this summer. Thank you for considering me as a coach!
         </p>
     </div>
 
@@ -49,15 +46,31 @@
   
           // Change elements' content
             if (currentState==="hailey"){
-                title.textContent = "Laine";
-                profilePic.src = "swim-laine.jpg";
-                bio.innerHTML = "<p>I'm a swimmer and swim coach with six years of experience, and I love helping others discover the joy of swimming. Whether your child is a complete beginner or an experienced swimmer, I can help them to improve in the water.</p><p>Currently, I am studying Kinesiology at Boise State University!</p>";
+                title.style.opacity = 0; 
+                bio.style.opacity = 0 
+                profilePic.style.opacity = 0;
+                setTimeout(() => {
+                    profilePic.src = "swim-laine.jpg";
+                    profilePic.style.opacity = 1;
+                    bio.innerHTML = "<p>Hello, my name is Laine Usher, and I am currently a senior at Boise State University, where I study Kinesiology.</p><p>I have a passion for swimming, and during my high school years, I played water polo for SRV and was named best defensive player for two consecutive years. I also swam for SRV's swim team and was a recreational swimmer for the Crow Canyon Sea Lions until May 2020.</p><p>While I excelled in breaststroke and IM, I had to work hard to become a strong butterflier. Despite initially disliking the stroke, a coach's belief in me and pushing me to practice more helped me master it. I am a firm believer in the power of good coaching and the importance of having someone who believes in your abilities.</p><p>For three summers, I worked as a junior swim coach for the Sea Lions and have since transitioned into teaching private swim lessons to children in the area. I find great joy in motivating and instructing kids in the water, and I would love to have the opportunity to work with your children this summer.</p><p>Thank you for considering me as a coach!</p>";
+                    bio.style.opacity = 1;
+                    title.textContent = "Laine";
+                    title.style.opacity = 1; 
+                }, 500);
                 aboutButton.textContent = "Learn About Hailey!";
                 currentState = "laine";
             }else{
-                title.textContent = "Hailey";
-                profilePic.src = "swim-hailey.jpg";
-                bio.innerHTML = "<p>I have four years of experience working as both a swim coach and private swim instructor. Being a swimmer all my life, I'm passionate about teaching the sport to others, and having fun while doing it! I've had so much success helping introduce new swimmers to the water, and would be so excited to work with your child, too! <br><br>Currently, I'm a rising sophomore at the University of Colorado, Boulder, where I'm studying Engineering, as well as Engineering Management.</p>";
+                title.style.opacity = 0; 
+                bio.style.opacity = 0 
+                profilePic.style.opacity = 0;
+                setTimeout(() => {
+                    profilePic.src = "swim-hailey.jpg";
+                    profilePic.style.opacity = 1;
+                    bio.innerHTML = "<p>Hello there! My name is Hailey Usher and I am a sophomore at the University of Colorado, Boulder, where I am studying Engineering and Engineering Management. I am also a member of CU's club swim team, and I have previous experience as a swimmer for both SRV and many years on the Crow Canyon Sea Lions.<br><br>My years of being coached have taught me the importance of good coaching, which led me to become a junior coach for the Sea Lions. Through this role, I learned the value of clear communication, patience, creating a fun team environment, and motivating children at various skill levels. As someone who has been a swimmer for most of my life, I am passionate about sharing my love for the sport and helping others learn while having fun.<br><br>I have been successful in introducing new swimmers to the water, and I am eager to work with your child this summer. Thank you for considering me as a coach!</p>";
+                    bio.style.opacity = 1;
+                    title.textContent = "Hailey";
+                    title.style.opacity = 1; 
+                }, 500);
                 aboutButton.textContent = "Learn About Laine!";
                 currentState = "hailey";
             }

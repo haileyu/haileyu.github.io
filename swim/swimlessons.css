@@ -148,6 +148,10 @@ p {
     color: white;
 }
 
+.fade-transition { 
+    transition: opacity 0.5s ease-out; 
+}
+
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 45px;
