@@ -120,14 +120,9 @@ p {
 .info{
     color: #1B3B6F;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 20px;
     padding: 20px;
 }
-
-.oval {
-    background-color: rgba(52, 138, 167, 0.4);
-    border-radius: 50%;
-  }
 
 .btn:link,
 .btn:visited {
