@@ -22,14 +22,20 @@
     <div class="content">
         <p class="shark"> &#129416;</p>
         <h1 class="gradient-text">Contact Us</h1>
-        <h2>We'd love to be able to stay in touch with you throughout the summer as we coordinate lessons.<br><br>Please be in contact with both Laine and Hailey!</h2>
-        <h3 class="info">Hailey's Phone Number:</h3>
-        <h3 class="info phone-number">925-683-7103</h3>
-        <h3 class="info">Laine's Phone Number:</h3>
-        <h3 class="info phone-number">925-683-3140</h3>
-        </div>
+        <h2>We'd love to be able to stay in touch with you throughout the summer as we coordinate lessons.<br><br></h2>
+        <h3 class="info">Click for Hailey's Phone Number:</h3>
+        <h3 class="info phone-number" onclick="showPhoneNumber(1,this)">&#128241;</h3>
+        <h3 class="info">Click for Laine's Phone Number:</h3>
+        <h3 class="info phone-number" onclick="showPhoneNumber(2,this)">&#128241;</h3>
     </div>
-
+    <script>
+        function showPhoneNumber(phoneNumber,element) {
+            var phoneNumbers = ["925-683-7103", "925-683-3140"];
+            element.textContent = phoneNumbers[phoneNumber - 1];
+            element.classList.remove("phone-number");
+            element.classList.add("phone-number-text");
+        }
+    </script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/usher-swim', text: 'Book Now!', color: '#348aa7', textColor: '#ffffff', branding: true }); }</script>
 </body>
