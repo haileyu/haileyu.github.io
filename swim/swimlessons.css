@@ -54,8 +54,8 @@ h2 {
     font-size: 35px;
     color: #348AA7;
     line-height: 45px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .book{
@@ -68,8 +68,6 @@ p {
     font-size: 25px;
     color: #348AA7;
     line-height: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 .navMenu {
@@ -106,10 +104,8 @@ p {
 }
 
 .bio{
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 16px;
-    line-height: 30px; 
+    font-size: 20px;
+    line-height: 20px; 
 }
 
 .pic{
@@ -170,9 +166,28 @@ p {
 }
 
 .phone-number-text{
-    font-size: 50px;
+    font-size: 40px;
+    color:#1B3B6F;
+}
+
+.cloud{ 
+    padding-left:40px;
+    padding-right:40px;
+    align-items: center;
+    height:120px;
+    background-image:linear-gradient(90deg,#348AA7,#A1DAE3,ghostwhite);
+    box-shadow: 10px 10px rgba(161,218,227,0.6);
+    border-radius:100px;
+}
+
+.question{
+    color:#1B3B6F;
+    padding-top:20px; 
+}
+
+.answer{
     color:#348AA7;
-    line-height: 20px;
+    padding-bottom:10px; 
 }
 
 @media only screen and (max-width: 600px) {
@@ -182,13 +197,17 @@ p {
     h2 {
         font-size: 25px;
     }
-    p{
-        font-size: 15px;
+    .bio{
+        font-size: 16px;
     }
     .shark{
         font-size:45px;
     }
     .navMenu a{
         font-size: 15px;
+    }
+    .question, .answer{
+        font-size: 16px;
+        padding: 0px;
     }
 }
