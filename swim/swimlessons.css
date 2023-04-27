@@ -58,6 +58,13 @@ h2 {
     padding-right: 10px;
 }
 
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    color: #348AA7;
+    line-height: 45px;
+}
+
 .book{
     color: #1B3B6F;
     padding-top: 50px;
@@ -188,6 +195,10 @@ p {
 .answer{
     color:#348AA7;
     padding-bottom:10px; 
+}
+
+.services{
+    padding: 10px; 
 }
 
 @media only screen and (max-width: 600px) {
