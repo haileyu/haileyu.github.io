@@ -23,7 +23,6 @@
 * [ICA10](https://haileyu.github.io/ica/hu-ica10)
 * [ICA11](https://haileyu.github.io/ica/hu-ica11)
 * [ICA12](https://haileyu.github.io/ica/hu-ica12)
-* ICA15
 
 ## weekly assignments...
 * [WA1](https://haileyu.github.io/wa/wa1)
@@ -39,7 +38,6 @@
 * [WA12](https://haileyu.github.io/wa/wa12)
 * [WA13](https://haileyu.github.io/wa/wa13/wa13)
 * [WA14](https://haileyu.github.io/wa/wa14)
-* WA15
 
 ## other/quizzes...
 * [QUIZ12](https://haileyu.github.io/extra/q12)
