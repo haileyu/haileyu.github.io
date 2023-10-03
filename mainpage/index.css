@@ -6,9 +6,11 @@ body{
     letter-spacing: 2px;
 }
 h1{
-    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.5em;
     color:white;
     line-height: 75px;
+    font-weight: 900;
 }
 p, li{
     font-family: "Open Sans";
@@ -32,7 +34,7 @@ a:hover, a:visited{
     position: relative;
     text-align: center;
     align-items: center;
-    background: linear-gradient(0deg, #492c96, #8543ad, #d562de, #fa56ae);
+    background: linear-gradient(0deg, #492c96, #8543ad, #d562de, #8C034E);
     background-size: 800% 800%;
     animation: header-animator 30s ease infinite;
 }
@@ -46,8 +48,8 @@ a:hover, a:visited{
 .waves{
     position: relative;
     width: 100%;
-    height: 120px;
-    margin-bottom: -8px;
+    height: 6em;
+    margin-bottom: -1em;
 }
 .web-content{
     position: relative;
@@ -96,9 +98,9 @@ a:hover, a:visited{
 
 /* media query */
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     .waves{
-        max-height: 30px;
+        max-height: 80;
     }
     .header-inside{
         height: 10vh;
@@ -107,7 +109,7 @@ a:hover, a:visited{
         height: 30vh;
     }
     h1{
-        font-size: 25px;
+        font-size: 2.5em;
     }
     p,li{
         font-size: 10px;
