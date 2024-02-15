@@ -36,25 +36,30 @@ html {
 
 /* NEW RULESETS besides the one Anthony gave us to start with */
 
+/* New rulesets that target the header and footer, giving them a height and padding on all sides */
 .card header, .card footer{
     height: 3.125em;
     padding: 1em;
 }
 
+/* Adjusting margins of h2 and p */ 
 h2, p{
     margin: 0;
 }
 
+/* Setting the height and bg color of the article */ 
 article{
     height: 12em;
     background-color: rgba(0,0,0,0.35);
 }
 
+/* Updating the Chris Mills font size and height */ 
 h2{
     font-size: 2em;
     line-height: 1.5em;
 }
 
+/* Setting the font size of the footer and article p */ 
 p{
     font-size: 1.25em;
     line-height: 1.5em;
@@ -65,6 +70,7 @@ footer p{
     line-height: 2.1em;
 }
 
+/* Changing the padding, sizing, and color of the article info. */
 .card article p{
     color: rgba(255,255,255,.75); /*lighter white shade.*/
     font-size: 0.938em;
