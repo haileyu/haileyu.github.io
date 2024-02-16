@@ -15,6 +15,7 @@
   h2, p{
     margin: 0;
   }
+
   .card{
     width: 35em;
     height: 22em;
@@ -23,6 +24,7 @@
     border: 0.2em solid black;
     border-radius: 1.5em;
   }
+  
   .card2{
     width: 35em;
     height: 22em;
