@@ -1,0 +1,153 @@
+/* homepage */
+
+.nav {
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.nav ul:hover,
+.nav div:hover {
+    color: black;
+}
+
+.music-link {
+    text-decoration: none; 
+    color: white;
+}
+
+.music-link:hover {
+    color: black;
+}
+
+.header {
+    position: fixed; 
+    top: 10px; 
+    left: 10px; 
+    font-weight: bold;
+}
+
+body p{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: small;
+    padding-left: 30px;
+}
+
+.imagebody {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1 px;
+  }
+
+
+body{
+    margin: 0;
+    background-color: #87ae73;
+}
+
+.musicsection{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+/* music page */
+
+/* body */
+
+body{
+    background-color: #87ae73;
+}
+
+/* header */
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size:xx-large;
+    position: fixed;
+}
+
+h3:hover {
+    color: black;
+}
+
+
+/* all images */
+
+.col img{
+    position: relative;
+    height: 70%;
+    width: auto; 
+}
+
+/* all rows */
+.row{
+    padding-top: 110px;
+    padding-left: 30px;
+    padding-right: 60px;
+    border: 2px solid  #87ae73;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* formatting for events */
+
+.row p{
+    font-size: small;
+}
+
+.row h4 {
+    margin-top: -80px;
+}
+
+
+.row h6 {
+    margin-top: -80px;
+}
+
+.row article{
+    margin-top: -80px; 
+}
+
+/* media queries */
+
+@media screen and (min-width: 400px) {
+    .musicsection{
+        display: block;
+    }
+
+    .col img {
+        margin-bottom: 20px;
+    }
+
+    .imagebody{
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid{
+        display:flex;
+        flex-direction: column;
+      }
+    
+}
+
+@media screen and (max-width: 1500px) {
+    .musicsection{
+        display: block;
+    }
+    
+}
