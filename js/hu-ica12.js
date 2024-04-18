@@ -91,6 +91,6 @@ function loop() {
         ball.collisionDetect();
     }
     requestAnimationFrame(loop);
-  }
+}
 
 loop();
