@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Topics</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        .header {
+            background: linear-gradient(to right, #1b396a, #3a8b80);
+            color: white;
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .nav-container {
+            width: 100vw;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between nav items and button */
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        /* Navigation Menu */
+        .nav {
+            display: flex;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Search and Login */
+        .search-login {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .search-box input {
+            padding: 8px 30px 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-box .icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            background: #1b396a;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .login-btn:hover {
+            background: #15406e;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tile {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+        }
+
+        .tile img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+        }
+
+        .tile-content {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .tile h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .tile p {
+            margin: 8px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">
+            <img src="image.png" alt="Logo">
+            <h1>TEACH ENGINEERING</h1>
+        </div>
+        <div class="search-login">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <span class="icon">🔍</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <div class="nav">
+            <a href="#">Curriculum</a>
+            <a href="#">K-12 Engineering</a>
+            <a href="#">Popular Topics</a>
+            <a href="#">Standards</a>
+            <a href="#">Get Involved</a>
+        </div>
+        <button class="login-btn">Log In</button>
+    </div>
+
+    <h1>All Popular Topics</h1>
+    
+    <div class="grid-container">
+        <div class="tile">
+            <img src="image.png" alt="Newton's Laws">
+            <div class="tile-content">
+                <h3>Newton’s Laws</h3>
+                <p>Newton’s three laws of motion help explain everyday phenomena that we see in the world around us.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="image.png" alt="Energy">
+            <div class="tile-content">
+                <h3>Energy</h3>
+                <p>Energy is essential to all living organisms and provides insight into real-world phenomena that engineers rely on to innovate.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="image.png" alt="Bernoulli’s Principle">
+            <div class="tile-content">
+                <h3>Bernoulli’s Principle</h3>
+                <p>Bernoulli’s Principle allows engineers to make sense of fluid dynamics to safely design fluid flow.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="image.png" alt="Waves">
+            <div class="tile-content">
+                <h3>Waves</h3>
+                <p>Engineers study waves to innovate and design products and processes that make our lives easier.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="image.png" alt="Magnetism">
+            <div class="tile-content">
+                <h3>Magnetism</h3>
+                <p>Engineers use magnets to develop groundbreaking technologies.</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="image.png" alt="Heat Transfer">
+            <div class="tile-content">
+                <h3>Heat Transfer</h3>
+                <p>Energy transfer, and specifically the transfer of thermal energy, is a fundamental area of study for all engineers.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -8,19 +8,26 @@
         body {
             font-family: Helvetica, sans-serif;
             margin: 0;
-            padding: 0;
             background-color: #f8f8f8;
             text-align: center;
         }
 
-        /* Header Styling */
         .header {
-            background: linear-gradient(to right, #1b396a, #3a8b80);
+            background: linear-gradient(to right, #0E1943, #395F8F, #50B396);
             color: white;
-            padding: 25px 20px;
+            padding: 0px 25px 0px 25px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 64px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 15;
         }
 
         .header .logo {
@@ -29,17 +36,13 @@
         }
 
         .header .logo img {
-            height: 40px;
+            height: 128px;
             margin-right: 20px;
-        }
-
-        .header h1 {
-            font-size: 30px;
-            margin: 0;
         }
 
         .nav-container {
             width: 100vw;
+            height: 70px;
             background: white;
             display: flex;
             align-items: center;
@@ -49,7 +52,6 @@
             box-sizing: border-box;
         }
 
-        /* Navigation Menu */
         .nav {
             display: flex;
         }
@@ -58,11 +60,10 @@
             text-decoration: none;
             color: black;
             margin: 0 15px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
         }
 
-        /* Search and Login */
         .search-login {
             display: flex;
             align-items: center;
@@ -86,7 +87,10 @@
             top: 50%;
             transform: translateY(-50%);
             color: #666;
-            font-size: 14px;
+        }
+
+        .search-box a {
+            font-size: 18px;
         }
 
         .login-btn {
@@ -103,24 +107,47 @@
             background: #15406e;
         }
 
-        h1 {
-            margin-bottom: 20px;
+        .category {
+            max-width: 1200px;
+            margin: 30px auto;
+            text-align: left;
         }
+
+        .category h2 {
+            padding: 0px 0px 0px 10px;
+            color: white;
+            margin: 0;
+            font-size: 36px;
+            height: 95px;
+            display: flex;
+            align-items: center;
+        }
+
+        .engineering { background: linear-gradient(to right, #901A03, #FB8B1C, #FFE562); }
+        .physics { background: linear-gradient(to right, #071B89, #308CE5, #5FEAF6); }
+        .energy { background: linear-gradient(to right, #6E1213, #EB334D, #FF5499); }
+        .earth { background: linear-gradient(to right, #013531, #38AA56, #BAFF65); }
+        .computing { background: linear-gradient(to right, #370F4C, #D24BC2, #EC97FF); }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .tile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            justify-content: flex-start;
+            padding: 20px;
             background: white;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tile {
+            background: #fff;
+            border-radius: 8px;
             overflow: hidden;
             transition: transform 0.2s ease-in-out;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            width: 370px;
+            height: 404px;
         }
 
         .tile:hover {
@@ -129,35 +156,21 @@
 
         .tile img {
             width: 100%;
-            height: 175px;
-            object-fit: cover;
-        }
-
-        .tile-content {
-            padding: 15px;
-            text-align: left;
+            height: 150px;
+            background: #ddd;
         }
 
         .tile h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .tile p {
-            margin: 8px 0 0;
-            font-size: 14px;
-            color: #666;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-
-    <!-- Header Section -->
     <div class="header">
         <div class="logo">
-            <img src="image.png" alt="Logo">
-            <h1>TEACH ENGINEERING</h1>
+            <img src="placeholder.png" alt="Logo">
         </div>
         <div class="search-login">
             <div class="search-box">
@@ -167,7 +180,6 @@
         </div>
     </div>
 
-    <!-- Navigation Menu -->
     <div class="nav-container">
         <div class="nav">
             <a href="#">Curriculum</a>
@@ -179,57 +191,51 @@
         <button class="login-btn">Log In</button>
     </div>
 
-    <h1>All Popular Topics</h1>
+    <h1>Popular Topics</h1>
+
+    <h2>Our Popular Topics are a curated list of the most-searched topics on Teach Engineering. Check them out below!</h2>
     
-    <div class="grid-container">
-        <div class="tile">
-            <img src="image.png" alt="Newton's Laws">
-            <div class="tile-content">
-                <h3>Newton’s Laws</h3>
-                <p>Newton’s three laws of motion help explain everyday phenomena that we see in the world around us.</p>
-            </div>
-        </div>
-
-        <div class="tile">
-            <img src="image.png" alt="Energy">
-            <div class="tile-content">
-                <h3>Energy</h3>
-                <p>Energy is essential to all living organisms and provides insight into real-world phenomena that engineers rely on to innovate.</p>
-            </div>
-        </div>
-
-        <div class="tile">
-            <img src="image.png" alt="Bernoulli’s Principle">
-            <div class="tile-content">
-                <h3>Bernoulli’s Principle</h3>
-                <p>Bernoulli’s Principle allows engineers to make sense of fluid dynamics to safely design fluid flow.</p>
-            </div>
-        </div>
-
-        <div class="tile">
-            <img src="image.png" alt="Waves">
-            <div class="tile-content">
-                <h3>Waves</h3>
-                <p>Engineers study waves to innovate and design products and processes that make our lives easier.</p>
-            </div>
-        </div>
-
-        <div class="tile">
-            <img src="image.png" alt="Magnetism">
-            <div class="tile-content">
-                <h3>Magnetism</h3>
-                <p>Engineers use magnets to develop groundbreaking technologies.</p>
-            </div>
-        </div>
-
-        <div class="tile">
-            <img src="image.png" alt="Heat Transfer">
-            <div class="tile-content">
-                <h3>Heat Transfer</h3>
-                <p>Energy transfer, and specifically the transfer of thermal energy, is a fundamental area of study for all engineers.</p>
-            </div>
+    <div class="category engineering">
+        <h2>Engineering & Design</h2>
+        <div class="grid-container">
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Engineering Design Process</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Design Thinking</h3></div>
         </div>
     </div>
 
+    <div class="category physics">
+        <h2>Physics & Mechanics</h2>
+        <div class="grid-container">
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Newton’s Laws</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Simple Machines</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Pulleys</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Waves</h3></div>
+        </div>
+    </div>
+
+    <div class="category energy">
+        <h2>Energy & Forces</h2>
+        <div class="grid-container">
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Energy</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Heat Transfer</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Electricity</h3></div>
+        </div>
+    </div>
+
+    <div class="category earth">
+        <h2>Earth & Environmental Science</h2>
+        <div class="grid-container">
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Climate Change</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Water</h3></div>
+        </div>
+    </div>
+
+    <div class="category computing">
+        <h2>Computing & Data Science</h2>
+        <div class="grid-container">
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Computing</h3></div>
+            <div class="tile"><img src="placeholder.png" alt=""><h3>Data Analysis & Probability</h3></div>
+        </div>
+    </div>
 </body>
 </html>
