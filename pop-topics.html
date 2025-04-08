@@ -52,7 +52,7 @@
             background: white;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between nav items and button */
+            justify-content: space-between;
             padding: 10px 30px 10px 10px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
@@ -60,6 +60,16 @@
 
         .nav {
             display: flex;
+            position: relative;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item a {
+            display: flex;
+            align-items: center;
         }
 
         .nav a {
@@ -68,8 +78,56 @@
             margin: 0 20px;
             font-size: 18px;
             font-weight: 100;
+            display: flex;
+            align-items: center;
         }
 
+        .nav a .chevron {
+            margin-left: 8px;
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 160px;
+            z-index: 10;
+            text-align: left;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block; 
+        }
+
+        .dropdown a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .nav-item .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 180px;
+            z-index: 10;
+        }
+
+        .dropdown a:hover {
+            background-color: #f4f4f4;
+        }
+        
         .search-login {
             display: flex;
             align-items: center;
@@ -243,7 +301,7 @@
         }
 
         .social-icons img {
-            width: 55px; /* Adjust icon size */
+            width: 55px; 
             height: 55px;
         }
 
@@ -261,6 +319,12 @@
 
         .footer-nav a:hover {
             text-decoration: underline;
+        }
+
+        .category a{
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
         }
 
         @media (max-width: 768px) {
@@ -292,13 +356,13 @@
 
             .nav {
                 flex-direction: row;
-                gap: 10px;
+                gap: 1px;
                 padding-bottom: 10px;
             }
 
             .nav a {
                 margin: 5px;
-                font-size: 14px;
+                font-size: 12px;
             }
 
             .category h2 {
@@ -384,7 +448,9 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="/logos/ncwit-te-logo.png" alt="Logo">
+            <a href="https://www.teachengineering.org/">
+                <img src="/logos/ncwit-te-logo.png" alt="te logo">
+            </a>
         </div>
         <div class="search-login">
             <div class="search-box">
@@ -396,14 +462,60 @@
 
     <div class="nav-container">
         <div class="nav">
-            <a href="#">Search Curriculum</a>
-            <a href="#">K-12 Engineering</a>
-            <a href="#">Popular Topics</a>
-            <a href="#">View Standards</a>
-            <a href="#">Get Involved</a>
-            <a href="#">Professional Development</a>
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/curriculum/browse">Browse Curriculum <span class="chevron">&#9662;</span></a>
+                <div class="dropdown">
+                    <a href="https://www.teachengineering.org/curriculum/browse">All Curriculum</a>
+                    <a href="https://www.teachengineering.org/curriculum/browse?collection=Activities">Activities</a>
+                    <a href="https://www.teachengineering.org/curriculum/browse?collection=Sprinkles">Informal Learning Activities</a>
+                    <a href="https://www.teachengineering.org/curriculum/browse?collection=Lessons">Lessons</a>
+                    <a href="https://www.teachengineering.org/curriculum/browse?collection=CurricularUnits">Units</a>
+                    <a href="https://www.teachengineering.org/curriculum/browse?collection=MakerChallenges">Maker Challenges</a>
+                    <a href="https://www.teachengineering.org/livinglabs">Living Labs</a>
+                    <a href="https://www.teachengineering.org/e4usa">e4usa</a>
+                    <a href="https://www.teachengineering.org/aspire">ASPIRE</a>
+                </div>
+            </div>
+        
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/k12engineering/what">K-12 Engineering <span class="chevron">&#9662;</span></a>
+                <div class="dropdown">
+                    <a href="https://www.teachengineering.org/k12engineering/what">What is Engineering?</a>
+                    <a href="https://www.teachengineering.org/k12engineering/why">Why Teach Engineering in K-12?</a>
+                    <a href="https://www.teachengineering.org/k12engineering/types-of-engineering">Types of Engineering</a>
+                </div>
+            </div>
+        
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/populartopics">Popular Topics</a>
+            </div>
+        
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/standards/browse">View Standards <span class="chevron">&#9662;</span></a>
+                <div class="dropdown">
+                    <a href="https://www.teachengineering.org/standards/browse">Search by Standards</a>
+                    <a href="https://www.teachengineering.org/standards/ngss">NGSS Engineering Design</a>
+                </div>
+            </div>
+        
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/getinvolved/submitcurriculum">Get Involved <span class="chevron">&#9662;</span></a>
+                <div class="dropdown">
+                    <a href="https://www.teachengineering.org/about/sponsors">Sponsors & Contributors</a>
+                    <a href="https://www.teachengineering.org/getinvolved/submitcurriculum">Submit Curriculum</a>
+                    <a href="https://www.teachengineering.org/getinvolved/reviewcurriculum">Become a TE Reviewer</a>
+                    <a href="https://www.teachengineering.org/getinvolved/submitcurriculum">Submit Curriculum</a>
+                    <a href="https://giving.cu.edu/fund/teachengineering-digital-library-fund">Donate</a>
+                </div>
+            </div>
+        
+            <div class="nav-item">
+                <a href="https://www.teachengineering.org/pdworkshops">Professional Development</a>
+            </div>
         </div>
-        <button class="login-btn">Log In</button>
+        <a href="https://www.teachengineering.org/account/login">
+            <button class="login-btn">Log In</button>
+        </a>
     </div>
 
     <div class="title-desc">
@@ -415,79 +527,125 @@
     <div class="category engineering">
         <h2>Engineering & Design</h2>
         <div class="grid-container">
-            <div class="tile"><img src="/pt-tiles/edp.png" alt=""><h3>Engineering Design<br>Process</h3></div>
-            <div class="tile"><img src="/pt-tiles/design-thinking.png" alt=""><h3>Design Thinking</h3></div>
+            <a href="https://www.teachengineering.org/populartopics/view/designprocess" class="tile">
+                <img src="/pt-tiles/edp.png" alt=""><h3>Engineering Design<br>Process</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/designthinking" class="tile">
+                <img src="/pt-tiles/design-thinking.png" alt=""><h3>Design Thinking</h3>
+            </a>
         </div>
     </div>
 
     <div class="category physics">
         <h2>Physics & Mechanics</h2>
         <div class="grid-container">
-            <div class="tile"><img src="/pt-tiles/newtons-laws.png" alt=""><h3>Newton’s Laws</h3></div>
-            <div class="tile"><img src="/pt-tiles/simple-machines.png" alt=""><h3>Simple Machines</h3></div>
-            <div class="tile"><img src="/pt-tiles/pulleys.png" alt=""><h3>Pulleys</h3></div>
-            <div class="tile"><img src="/pt-tiles/waves.png" alt=""><h3>Waves</h3></div>
-            <div class="tile"><img src="/pt-tiles/bernoullis.png" alt=""><h3>Bernoulli's Principle</h3></div>
+            <a href="https://www.teachengineering.org/populartopics/view/newtonslaws" class="tile">
+                <img src="/pt-tiles/newtons-laws.png" alt=""><h3>Newton’s Laws</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/simplemachines" class="tile">
+                <img src="/pt-tiles/simple-machines.png" alt=""><h3>Simple Machines</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/pulleys" class="tile">
+                <img src="/pt-tiles/pulleys.png" alt=""><h3>Pulleys</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/waves" class="tile">
+                <img src="/pt-tiles/waves.png" alt=""><h3>Waves</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/bernoulli" class="tile">
+                <img src="/pt-tiles/bernoullis.png" alt=""><h3>Bernoulli's Principle</h3>
+            </a>
         </div>
     </div>
 
     <div class="category energy">
         <h2>Energy & Forces</h2>
         <div class="grid-container">
-            <div class="tile"><img src="/pt-tiles/energy.png" alt=""><h3>Energy</h3></div>
-            <div class="tile"><img src="/pt-tiles/heat-transfer.png" alt=""><h3>Heat Transfer</h3></div>
-            <div class="tile"><img src="/pt-tiles/electricity.png" alt=""><h3>Electricity</h3></div>
-            <div class="tile"><img src="/pt-tiles/magnetism.png" alt=""><h3>Magnetism</h3></div>
+            <a href="https://www.teachengineering.org/populartopics/view/energy" class="tile">
+                <img src="/pt-tiles/energy.png" alt=""><h3>Energy</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/heattransfer" class="tile">
+                <img src="/pt-tiles/heat-transfer.png" alt=""><h3>Heat Transfer</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/electricity" class="tile">
+                <img src="/pt-tiles/electricity.png" alt=""><h3>Electricity</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/magnetism" class="tile">
+                <img src="/pt-tiles/magnetism.png" alt=""><h3>Magnetism</h3>
+            </a>
         </div>
     </div>
 
     <div class="category earth">
         <h2>Earth & Environmental Science</h2>
         <div class="grid-container">
-            <div class="tile"><img src="/pt-tiles/climate-change.png" alt=""><h3>Climate Change</h3></div>
-            <div class="tile"><img src="/pt-tiles/water.png" alt=""><h3>Water</h3></div>
-            <div class="tile"><img src="/pt-tiles/natural-disasters.png" alt=""><h3>Natural Disasters</h3></div>
-            <div class="tile"><img src="/pt-tiles/mixtures.png" alt=""><h3>Mixtures<br>& Solutions</h3></div>
-            <div class="tile"><img src="/pt-tiles/space.png" alt=""><h3>Space</h3></div>
+            <a href="https://www.teachengineering.org/populartopics/view/climatechange" class="tile">
+                <img src="/pt-tiles/climate-change.png" alt=""><h3>Climate Change</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/water" class="tile">
+                <img src="/pt-tiles/water.png" alt=""><h3>Water</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/naturaldisasters" class="tile">
+                <img src="/pt-tiles/natural-disasters.png" alt=""><h3>Natural Disasters</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/mixtures" class="tile">
+                <img src="/pt-tiles/mixtures.png" alt=""><h3>Mixtures<br>& Solutions</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/space" class="tile">
+                <img src="/pt-tiles/space.png" alt=""><h3>Space</h3>
+            </a>
         </div>
     </div>
 
     <div class="category computing">
         <h2>Computing & Data Science</h2>
         <div class="grid-container">
-            <div class="tile"><img src="/pt-tiles/computing.png" alt=""><h3>Computing</h3></div>
-            <div class="tile"><img src="/pt-tiles/data-analysis.png" alt=""><h3>Data Analysis<br>& Probability</h3></div>
-            <div class="tile"><img src="/pt-tiles/measurement-data.png" alt=""><h3>Measurement &<br>Data Collection</h3></div>
+            <a href="https://www.teachengineering.org/populartopics/view/computing" class="tile">
+                <img src="/pt-tiles/computing.png" alt=""><h3>Computing</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/data-analysis-probability" class="tile">
+                <img src="/pt-tiles/data-analysis.png" alt=""><h3>Data Analysis<br>& Probability</h3>
+            </a>
+            <a href="https://www.teachengineering.org/populartopics/view/measurement" class="tile">
+                <img src="/pt-tiles/measurement-data.png" alt=""><h3>Measurement &<br>Data Collection</h3>
+            </a>
         </div>
     </div>
 
     <div class="bottom-desc">
         <h2>Looking for something specific?<br>Search our entire curriculum below.</h2>
-        <button class="browse-btn">Browse Curriculum</button>
+        <a href="https://www.teachengineering.org/curriculum/browse">
+            <button class="browse-btn">Browse Curriculum</button>
+        </a>
     </div>
 
     <footer class="footer">
         <div class="footer-left">
-            <img src="/logos/nsf-logo.png" alt="NSF Logo" class="footer-logo">
+            <a href="https://www.nsf.gov/">
+                <img src="/logos/nsf-logo.png" alt="nsf logo"  class="footer-logo">
+            </a>
             <div class="divider"></div>
-            <img src="/logos/eng-logo.png" alt="CU Engineering Logo" class="footer-logo">
+            <a href="https://www.colorado.edu/engineering/">
+                <img src="/logos/eng-logo.png" alt="ncwit logo"  class="footer-logo">
+            </a>
             <div class="divider"></div>
-            <img src="/logos/ncwit-logo.png" alt="NCWIT Logo" class="footer-logo">
+            <a href="https://ncwit.org/">
+                <img src="/logos/ncwit-logo.png" alt="eng logo"  class="footer-logo">
+            </a>
         </div>
         <div class="footer-right">
             <div class="social-icons">
-                <a href="#"><img src="/socials/yt.png" alt="YouTube"></a>
-                <a href="#"><img src="/socials/fb.png" alt="Facebook"></a>
-                <a href="#"><img src="/socials/ig.png" alt="Instagram"></a>
-                <a href="#"><img src="/socials/bs.png" alt="Butterfly"></a>
-                <a href="#"><img src="/socials/pt.png" alt="Pinterest"></a>
+                <a href="https://www.youtube.com/c/TeachEngineering"><img src="/socials/yt.png" alt="YouTube"></a>
+                <a href="https://www.facebook.com/TeachEngineeringDigitalLibrary"><img src="/socials/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/teachengineering/"><img src="/socials/ig.png" alt="Instagram"></a>
+                <a href="https://bsky.app/profile/teachengineering.org"><img src="/socials/bs.png" alt="Butterfly"></a>
+                <a href="https://www.pinterest.com/teachengineering/"><img src="/socials/pt.png" alt="Pinterest"></a>
             </div>
             <nav class="footer-nav">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Sitemap</a>
-                <a href="#">Donate</a>
+                <a href="https://www.teachengineering.org/">Home</a>
+                <a href="https://www.teachengineering.org/about">About</a>
+                <a href="https://www.teachengineering.org/about/contactus">Contact Us</a>
+                <a href="https://www.teachengineering.org/home/sitemap">Sitemap</a>
+                <a href="https://giving.cu.edu/fund/teachengineering-digital-library-fund">Donate</a>
             </nav>
         </div>
     </footer>
